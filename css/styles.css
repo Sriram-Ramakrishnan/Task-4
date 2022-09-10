@@ -1,0 +1,10 @@
+.qna{
+    border: 1px solid black;
+    margin: 10px 25px;
+    padding: 10px;
+    
+}
+
+p {
+    overflow: hidden;
+}
