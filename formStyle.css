@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+    font-family: outfit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    background-color: aquamarine;
+    width: 50vw;
+    height: 80vh;
+    justify-content: center;
+    align-items:center;
+    align-content: flex-start;
+}
+
+
+
+.collegeName{
+    background-color: blue;
+    width: 21vw;
+    
+}
+
+div{
+    margin-bottom: 20px;
+}
+
+.text{
+    height: 5vh;
+    width: 20vw;
+}
+
+
+
+.options{
+    background-color: blueviolet;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    
+
+}
+
+.buttons{
+    margin-bottom: 2px;
+    width: 20px;
+}
+
+label{
+    font-size: 20px;
+    font-weight: 700;
+}
