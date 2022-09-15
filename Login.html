@@ -1,0 +1,99 @@
+<html>
+
+<head>
+  <title>
+    Login Page
+  </title>
+  <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
+  <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1" />
+  
+</head>
+
+<body>
+  <center>
+  <label>E-mail</label>
+<input type="email" id="mail" />
+<label>Password</label>
+<input type="password" id="pass"/>
+<br>
+<br>
+<br>
+<button id="signin">SIGN-IN</button>
+<br>
+<br>
+<br>
+  <button id="signup">SIGN-UP</button>
+  <br>
+  <br>
+  <button id="goo">Sign Up with Google</button>
+</center>
+</body>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+<script>
+ const firebaseConfig = firebase.initializeApp({
+    apiKey: "AIzaSyB5dz82Olwh6Gezuw9GAsqIZesgOVTDCWg",
+    authDomain: "events-59546.firebaseapp.com",
+    projectId: "events-59546",
+    storageBucket: "events-59546.appspot.com",
+    messagingSenderId: "397686800845",
+    appId: "1:397686800845:web:f5a46597f2736d14754484",
+    measurementId: "G-HZWS0XFCVZ"
+  });
+
+const db = firebaseConfig.firestore();
+const auth = firebaseConfig.auth();
+
+document.getElementById("signup").onclick=function()
+{
+  let a=document.getElementById("mail");
+  let b=document.getElementById("pass");
+  console.log(a);
+  firebase.auth().createUserWithEmailAndPassword(a.value,b.value)
+  .then((userCredential) => {
+    console.log(userCredential);
+  })
+  .catch((error)=>
+  {
+    alert(error);
+  })
+ 
+}
+document.getElementById("signin").onclick=function()
+{
+  let o=document.getElementById("mail");
+  let p=document.getElementById("pass");
+  firebase.auth().signInWithEmailAndPassword(o.value,p.value)
+  
+    .then((userCredential)=>
+    {
+      console.log(userCredential);
+      alert("User Succesfully Registered");
+    })
+    .catch((error)=>
+    {
+      alert(error);
+    })
+
+  }
+document.getElementById("goo").onclick=function()
+{
+  let provider = new firebase.auth.GoogleAuthProvider();
+  firebase.auth().signInWithPopup(provider).then((result)=>{
+  
+    var credential = result.credential;
+    var user = result.user;
+console.log(user);
+alert("Signed in successfully using Google");
+
+  })
+  .catch((error)=>
+  {
+    console.log(error);
+    alert(error);
+  })
+}
+</script>
+</html>
