@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Task - 4</title>
+</head>
+<body id = "mode" class="light">
+  
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://res.cloudinary.com/dpxlluhmw/image/upload/v1663525261/Gravitas_1_2_vh01l1.png" alt="" >
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" id="home-but" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About RoboVITics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">FAQs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="modeText" href="#" onclick="mode();"> Light Mode</a>
+          </li>
+          <script>
+            function mode() {
+              const element = document.getElementById("mode");
+              const text = document.getElementById("modeText");
+              if (element.className == "light") {
+                element.className = "dark";
+                text.innerText = "Dark Mode";
+              } else {
+                element.className = "light";
+                text.innerText = "Light Mode";
+              }
+            }
+          </script>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#" id="logout" data-bs-toggle="modal" data-bs-target="#exampleModal">Logout</a>
+          </li> -->
+
+          
+        </ul>
+        <span class="navbar-text">
+          <a class="nav-link" href="#" id="username">Username</a>
+        </span>
+        <span class="navbar-text">
+          <a class="nav-link" href="#" id="logout">Logout</a>
+        </span>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Button trigger modal
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button> -->
+
+  
+  <!-- Banner goes here -->
+  <div class="banner">
+    <!-- first event -->
+    
+    <div class="banner-box">
+
+      <div class="event-description">
+
+        <div class="text">
+          <p class="text-head">
+            ROBOWARS
+          </p>
+          <p class="text-description">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took <br> <span class="timer"> DATE: 2nd December 2022 </span>
+          </p>
+        </div>
+
+        <div class="event-button">
+            <a href="eventform.html" class="button">Register</a>
+        </div>
+      </div>
+
+      <div class="event-logo">
+        <img src="https://res.cloudinary.com/dpxlluhmw/image/upload/v1662914168/sample.jpg" class="d-block w-100" alt="...">
+      </div>
+
+    </div>
+
+
+    <!-- second event -->
+    <div class="banner-box">
+
+      <div class="event-description">
+
+        <div class="text">
+          <p class="text-head">
+            HANDS ON ROBOTICS
+          </p>
+          <p class="text-description">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took<br> <span class="timer"> DATE: 2nd December 2022 </span>
+          </p>
+        </div>
+
+        <div class="event-button">
+            <a href="eventform.html" class="button">Register</a>
+        </div>
+      </div>
+
+      <div class="event-logo">
+        <img src="https://res.cloudinary.com/dpxlluhmw/image/upload/v1662914168/sample.jpg" class="d-block w-100" alt="...">
+      </div>
+
+    </div>
+
+
+    <!-- third event -->
+    <div class="banner-box">
+
+      <div class="event-description">
+
+        <div class="text">
+          <p class="text-head">
+            MACHINE DESIGN with FUSION 360
+          </p>
+          <p class="text-description">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took<br> <span class="timer"> DATE: 2nd December 2022 </span>
+          </p>
+        </div>
+
+        <div class="event-button">
+            <a href="eventform.html" class="button">Register</a>
+        </div>
+      </div>
+
+      <div class="event-logo">
+        <img src="https://res.cloudinary.com/dpxlluhmw/image/upload/v1662914168/sample.jpg" class="d-block w-100" alt="...">
+      </div>
+
+    </div>
+  </div>
+
+  <!-- History of the upcoming event (banner one). -->
+
+<div class="history">
+  <h3 class="history-head">ROBOVITICS</h3>
+  <div class="history-des">
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer tookLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took</p>
+  </div>
+</div>
+<!-- Momentos ( Photo Carousal, take photos from Firebase). -->
+<div class="media">
+  <h3 class="media-head">MEDIA </h3>
+  <center>
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+  <div class="carousel-item active">
+  <img src="https://res.cloudinary.com/dpxlluhmw/image/upload/v1662914168/sample.jpg" class="d-block w-100" alt="...">
+  </div>
+  <div class="carousel-item">
+  <img src="https://res.cloudinary.com/dpxlluhmw/image/upload/v1662914194/cld-sample-4.jpg" class="d-block w-100" alt="...">
+  </div>
+  <div class="carousel-item">
+  <img src="https://res.cloudinary.com/dpxlluhmw/image/upload/v1662914193/cld-sample-2.jpg" class="d-block w-100" alt="...">
+  </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+  </button>
+  </div>
+  </center>
+</div>
+
+
+
+<!-- A simple Ask a doubt Section, displaying the top 6 asked questions about the upcoming event. -->
+<div class="faq-main">
+<h3 class="faq-head">FAQs</h3>
+<div class="faq">
+  <div class="faq-box">
+    <div class="quest">
+      <p>When and where is Robowars happening?</p>
+    </div>
+    <div class="ans">
+      <p>Robowars will be happening during Gravitas and will be from
+        30th sep to 2nd oct at the Outdoor stadium.Stay tuned for the
+        timings!</p>
+    </div>
+  </div>
+  <div class="faq-box">
+    <div class="quest">
+      <p>No. of teams participating?</p>
+    </div>
+    <div class="ans">
+      <p>
+        40 teams will be participating this year!
+      </p>
+    </div>
+  </div>
+  <div class="faq-box">
+    <div class="quest">
+      <p>How can you attend this event?</p>
+    </div>
+    <div class="ans">
+      <p>
+        Go to Gravitas website and search for robowars and register
+          for the event!
+      </p>
+    </div>
+  </div>
+  <div class="faq-box">
+    <div class="quest">
+      <p>Who is eligible to participate?</p>
+    </div>
+    <div class="ans">
+      <p>
+        If you're a part of a team that builds bots and bots follow
+          our regulations
+      </p>
+    </div>
+  </div>
+  <div class="faq-box">
+    <div class="quest">
+      <p>How long does each match usually last?</p>
+    </div>
+    <div class="ans">
+      <p>
+        3 minutes each
+      </p>
+    </div>
+  </div>
+  <div class="faq-box">
+    <div class="quest">
+      <p>What is the team size for each time?</p>
+    </div>
+    <div class="ans">
+      <p>
+        7-12
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+  let answers=document.querySelectorAll(".faq-box");
+  answers.forEach((event)=>{
+      event.addEventListener('click',()=>{
+          if(event.classList.contains("active")){
+              event.classList.remove("active");
+          }
+          else{
+              event.classList.add("active");
+          }
+      })
+  })
+</script>
+
+
+
+<!-- Make a more events section : -->
+<!-- Should contain the list the recent events sorted in order of their dates (Get the data from FB) -->
+
+<div class="more-events">
+
+<h3 class="more-events-head">other events</h3>
+
+<div class="event-posts">
+<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Frobovitics%2Fposts%2Fpfbid02mHSqq4aRmRi7vwmb4esBsbN5DBZHj7qi2tEHVeWojVf2uRi29CCiNr8NVzRfdHxyl&show_text=false&width=500" 
+class="post" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Frobovitics%2Fposts%2Fpfbid02Jen61Hy1552dU7safkgKTcDSKzfWw4LdY3tN3TRNFXM5BKMb2XgpBLKWMpZdADKCl&show_text=false&width=500" class="post" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+</div>
+</div>
+  
+</body>
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+  <div class="col-md-4 d-flex align-items-center">
+    <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+      <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+    </a>
+    <span class="mb-3 mb-md-0 text-muted">© 2022 Company, Inc</span>
+  </div>
+</footer>
+</html>
